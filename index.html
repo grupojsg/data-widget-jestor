@@ -14,7 +14,7 @@
       height: 40px;
       width: 392px;
       overflow: hidden;
-      font-family: 'Segoe UI', 'Roboto', sans-serif;
+      font-family: "Segoe UI", "Roboto", sans-serif;
       color: #263144;
     }
     .data-box {
@@ -41,12 +41,12 @@
   <script>
     const data = new Date();
     const opcoes = {
-      weekday: 'long',
-      day: 'numeric',
-      month: 'long'
+      weekday: "long",
+      day: "numeric",
+      month: "long",
     };
-    const dataFormatada = data.toLocaleDateString('pt-BR', opcoes);
-    document.getElementById('data').innerText =
+    const dataFormatada = data.toLocaleDateString("pt-BR", opcoes);
+    document.getElementById("data").innerText =
       dataFormatada.charAt(0).toUpperCase() + dataFormatada.slice(1);
   </script>
 </body>
