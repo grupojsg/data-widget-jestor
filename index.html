@@ -13,19 +13,20 @@
       display: flex;
       align-items: center;
       justify-content: center;
-      height: 100vh;
+      height: 40px;
+      width: 392px;
+      overflow: hidden;
     }
     .data-box {
-      font-size: 18px;
+      font-size: 16px;
       font-weight: 600;
-      padding: 10px 16px;
+      padding: 0 12px;
       border-radius: 6px;
-      box-shadow: 0 1px 3px rgba(0, 0, 0, 0.08);
     }
   </style>
 </head>
 <body>
-  <div class="data-box" id="data"></div>
+  <div class="data-box" id="data">Carregando...</div>
 
   <script>
     const data = new Date();
