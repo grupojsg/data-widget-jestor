@@ -1,38 +1,32 @@
+
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=392, height=40, initial-scale=1.0" />
-  <title>Data Atual SVG</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Data Atual</title>
   <style>
-    html, body {
+    body {
       margin: 0;
-      padding: 0;
-      width: 392px;
-      height: 40px;
+      font-family: 'Segoe UI', 'Roboto', sans-serif;
       background-color: #ffffff;
+      color: #263144;
       display: flex;
       align-items: center;
       justify-content: center;
+      height: 100vh;
     }
-    svg {
-      width: 100%;
-      height: 100%;
-    }
-    text {
-      fill: #263144;
-      font-family: 'Segoe UI', 'Roboto', sans-serif;
-      font-size: 16px;
+    .data-box {
+      font-size: 18px;
       font-weight: 600;
-      dominant-baseline: middle;
-      text-anchor: middle;
+      padding: 10px 16px;
+      border-radius: 6px;
+      box-shadow: 0 1px 3px rgba(0, 0, 0, 0.08);
     }
   </style>
 </head>
 <body>
-  <svg viewBox="0 0 392 40" xmlns="http://www.w3.org/2000/svg">
-    <text x="196" y="20" id="data">Carregando...</text>
-  </svg>
+  <div class="data-box" id="data"></div>
 
   <script>
     const data = new Date();
@@ -42,8 +36,8 @@
       month: 'long'
     };
     const dataFormatada = data.toLocaleDateString('pt-BR', opcoes);
-    const capitalizada = dataFormatada.charAt(0).toUpperCase() + dataFormatada.slice(1);
-    document.getElementById('data').textContent = capitalizada;
+    document.getElementById('data').innerText =
+      dataFormatada.charAt(0).toUpperCase() + dataFormatada.slice(1);
   </script>
 </body>
 </html>
