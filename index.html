@@ -7,21 +7,31 @@
   <style>
     body {
       margin: 0;
-      font-family: 'Segoe UI', 'Roboto', sans-serif;
       background-color: #ffffff;
-      color: #263144;
       display: flex;
       align-items: center;
       justify-content: center;
       height: 40px;
       width: 392px;
       overflow: hidden;
+      font-family: 'Segoe UI', 'Roboto', sans-serif;
+      color: #263144;
     }
     .data-box {
-      font-size: 16px;
+      width: 392px;
+      max-height: 40px;
       font-weight: 600;
-      padding: 0 12px;
-      border-radius: 6px;
+      font-size: clamp(12px, 2.5vw, 20px);
+      line-height: 1.2;
+      text-align: center;
+      overflow: hidden;
+      padding: 0 10px;
+      box-sizing: border-box;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      word-wrap: break-word;
+      user-select: none;
     }
   </style>
 </head>
