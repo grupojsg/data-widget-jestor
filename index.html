@@ -5,6 +5,10 @@
   <meta name="viewport" content="width=392, height=40, initial-scale=1.0"/>
   <title>Data Atual</title>
   <style>
+    * {
+      box-sizing: border-box;
+    }
+
     html, body {
       margin: 0;
       padding: 0;
@@ -20,14 +24,19 @@
     }
 
     .data-box {
-      font-size: 16px;
+      width: 100%;
+      height: 100%;
+      font-size: 15px;
       font-weight: 600;
       white-space: nowrap;
-      height: 100%;
+      overflow: hidden;
+      text-overflow: ellipsis;
       display: flex;
       align-items: center;
       justify-content: center;
       line-height: 1;
+      text-align: center;
+      padding: 0 8px;
     }
   </style>
 </head>
